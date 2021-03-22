@@ -19,6 +19,7 @@
 		32B66D6026074111000601C1 /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B66D5F26074111000601C1 /* News.swift */; };
 		32B66D65260742D5000601C1 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B66D64260742D5000601C1 /* NetworkManager.swift */; };
 		32BC5F70260918DF00F22A52 /* ShadowImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32BC5F6F260918DF00F22A52 /* ShadowImageView.swift */; };
+		32BC5F73260920AB00F22A52 /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32BC5F72260920AB00F22A52 /* NewsTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		32B66D5F26074111000601C1 /* News.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
 		32B66D64260742D5000601C1 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		32BC5F6F260918DF00F22A52 /* ShadowImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowImageView.swift; sourceTree = "<group>"; };
+		32BC5F72260920AB00F22A52 /* NewsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 			children = (
 				324E2EF426075E0F00169428 /* HeaderView.swift */,
 				32BC5F6F260918DF00F22A52 /* ShadowImageView.swift */,
+				32BC5F72260920AB00F22A52 /* NewsTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -195,6 +198,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				32B66D65260742D5000601C1 /* NetworkManager.swift in Sources */,
+				32BC5F73260920AB00F22A52 /* NewsTableViewCell.swift in Sources */,
 				324E2EF526075E0F00169428 /* HeaderView.swift in Sources */,
 				3253F36226053B23001620B9 /* ViewController.swift in Sources */,
 				3253F35E26053B23001620B9 /* AppDelegate.swift in Sources */,
