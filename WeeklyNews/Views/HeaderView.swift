@@ -36,6 +36,21 @@ final class HeaderView: UIView {
         return iv
     }()
         
+    private lazy var headerStackView: UIStackView = {
+        let sv = UIStackView(arrangedSubviews: [headerCircleImage,headerLabel,plusImage])
+        sv.translatesAutoresizingMaskIntoConstraints = false
+        sv.axis = .horizontal
+        return sv
+    }()
+    
+    private lazy var subheadlineLabel: UILabel = {
+       let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.font.withSize(fontSize)
+        label.text = "Top Headlines"
+        label.textColor = .gray
+        return label
+    }()
     
     init(fontSize: CGFloat) {
         self.fontSize = fontSize
@@ -47,16 +62,27 @@ final class HeaderView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    
-    //MARK: - Lifecycle
-    
-    
     //MARK: - Helpers
     func setupView() {
+        addSubview(headerStackView)
+        addSubview(subheadlineLabel)
+        
         setupConstraints()
     }
     
     func setupConstraints() {
+        // News header
+        NSLayoutConstraint.activate([
+            headerStackView.leadingAnchor.constraint(equalTo: leadingAnchor),
+            headerStackView.topAnchor.constraint(equalTo: topAnchor)
+        ])
+        
+        // Subheadline
+        NSLayoutConstraint.activate([
+            subheadlineLabel.leadingAnchor.constraint(equalTo: leadingAnchor),
+            subheadlineLabel.topAnchor.constraint(equalTo: headerStackView.bottomAnchor,constant: 8),
+            subheadlineLabel.bottomAnchor.constraint(equalTo: bottomAnchor)
+        ])
         
     }
     

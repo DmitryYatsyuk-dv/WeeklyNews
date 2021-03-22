@@ -14,6 +14,8 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .white
         
+        // GO ON VIDEO = 1:05:00
+        
         ///Test API
 //        NetworkManager.shared.getNews { (news) in
 //            guard let news = news else { return }
