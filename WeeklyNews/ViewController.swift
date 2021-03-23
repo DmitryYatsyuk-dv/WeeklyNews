@@ -64,7 +64,6 @@ class ViewController: UIViewController {
             tableView.topAnchor.constraint(equalTo: headerView.bottomAnchor,constant: 8),
             tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
         ])
-        
     }
     
     func fetchNews() {
@@ -87,6 +86,17 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         return cell ?? UITableViewCell()
     }
     
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let news = viewModel.newsVM[indexPath.row]
+        guard let url = URL(string: news.url) else {
+            return
+        }
+        
+        // WebView
+        let config = SFSafariViewController.Configuration()
+        let safariViewController = SFSafariViewController(url: url, configuration: config)
+        safariViewController.modalPresentationStyle = .formSheet
+        present(safariViewController, animated: true, completion: nil)
+    }
 }
 

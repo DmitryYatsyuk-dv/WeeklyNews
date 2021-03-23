@@ -8,6 +8,7 @@
 import UIKit
 
 final class HeaderView: UIView {
+    
     //MARK: - Properties
     private var fontSize: CGFloat
     
@@ -83,8 +84,5 @@ final class HeaderView: UIView {
             subheadlineLabel.topAnchor.constraint(equalTo: headerStackView.bottomAnchor,constant: 8),
             subheadlineLabel.bottomAnchor.constraint(equalTo: bottomAnchor)
         ])
-        
     }
-    
-
 }

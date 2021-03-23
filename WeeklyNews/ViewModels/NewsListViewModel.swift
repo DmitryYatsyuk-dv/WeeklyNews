@@ -20,8 +20,6 @@ class NewsListViewModel {
                 self.newsVM = newsVM
                 completionHandler(newsVM)
             }
-            
-            
         }
     }
 }

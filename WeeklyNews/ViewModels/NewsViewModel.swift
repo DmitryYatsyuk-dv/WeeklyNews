@@ -29,5 +29,4 @@ struct NewsViewModel {
     var urlToImage: String {
         return news.urlToImage ?? "https://p.kindpng.com/picc/s/451-4517593_weekly-news-hd-png-download.png"
     }
-    
 }

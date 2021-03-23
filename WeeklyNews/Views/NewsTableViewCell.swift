@@ -18,7 +18,6 @@ final class NewsTableViewCell: UITableViewCell {
                     DispatchQueue.main.async {
                         self.newsImage.image = UIImage(data: data)
                     }
-                    
                 }
             }
         }
@@ -69,14 +68,14 @@ final class NewsTableViewCell: UITableViewCell {
             newsImage.leadingAnchor.constraint(equalTo: leadingAnchor),
             newsImage.trailingAnchor.constraint(equalTo: trailingAnchor),
             newsImage.topAnchor.constraint(equalTo: topAnchor),
-            newsImage.heightAnchor.constraint(equalToConstant: 200)
+            newsImage.heightAnchor.constraint(equalToConstant: 225)
         ])
         
         // Title
         NSLayoutConstraint.activate([
             titleLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16),
             titleLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16),
-            titleLabel.topAnchor.constraint(equalTo: topAnchor, constant: 8),
+            titleLabel.topAnchor.constraint(equalTo: newsImage.bottomAnchor, constant: 16),
             titleLabel.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -16)
         ])
     }
