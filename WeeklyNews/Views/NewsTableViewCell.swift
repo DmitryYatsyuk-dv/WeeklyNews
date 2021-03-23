@@ -12,7 +12,14 @@ final class NewsTableViewCell: UITableViewCell {
     var newsViewModel: NewsViewModel? {
         didSet {
             if let newsViewModel = newsViewModel {
-                
+                titleLabel.text = newsViewModel.title
+                NetworkManager.shared.getImage(urlString: newsViewModel.urlToImage) { (data) in
+                    guard let data = data else { return }
+                    DispatchQueue.main.async {
+                        self.newsImage.image = UIImage(data: data)
+                    }
+                    
+                }
             }
         }
     }

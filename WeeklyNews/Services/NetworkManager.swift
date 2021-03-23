@@ -32,7 +32,7 @@ class NetworkManager {
             newsEnvelop == nil
                 ? completionHandler(nil)
                 : completionHandler(newsEnvelop!.articles)
-        }.resume() 
+        }.resume()
     }
     
     func getImage(urlString: String, completion: @escaping (Data?) -> Void) {
